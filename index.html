@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="styles.css" />
         <title>Conquer</title>
     </head>
-    <body>
+    <body id="homepage">
         <header>
             <nav>
                 <a href="#homepage">Homepage</a>
@@ -16,7 +16,7 @@
                 <a href="#contact">Contact</a>
                 <a href="https://www.free-css.com/free-css-templates">External</a>
             </nav>
-            <div id="hompage" class="title title--hero">
+            <div class="title title--hero">
                 <h1>Conquer</h1>
                 <h3>Chingu Solo Project</h3>
             </div>
@@ -28,19 +28,19 @@
                         <img src="images/1-1.jpg" alt="Forset at night with northen lights" />
                         <h4>Card One</h4>
                         <p>Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</p>
-                        <button>Button Green</button>
+                        <button class="button button--green">Button Green</button>
                     </div>
                     <div class="card card--medium">
                         <img src="images/1-2.jpg" alt="City at night with a bridge and water" />
                         <h4>Card Two</h4>
                         <p>Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</p>
-                        <button>Button Blue</button>
+                        <button class="button button--blue">Button Blue</button>
                     </div>
                     <div class="card card--medium">
                         <img src="images/1-3.jpg" alt="train track bridge" />
                         <h4>Card Three</h4>
                         <p>Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</p>
-                        <button>Button Red</button>
+                        <button class="button button--red">Button Red</button>
                     </div>
                 </div>
                 <div class="container container--two">
@@ -55,7 +55,7 @@
                         <h4>Two Column Right Side</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor eros eget eros maximus, ut cursus sem euismod. Donec iaculis tristique odio at consectetur. Nullam dignissim varius suscipit. Sed in leo sit amet velit finibus pretium.</p>
                         <p>Vestibulum vel mauris at erat mattis accumsan et ac lorem. Cras non venenatis orci, sed tincidunt massa. Duis nisl lectus, auctor eu sodales at, dignissim eu orci. Sed vitae venenatis magna, in blandit metus.</p>
-                        <button>Read More</button>
+                        <button class="button button--white">Read More</button>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                         <img src="images/4-2.jpg" alt="Jaged mountain top covered in snow" />
                         <h4>Column One</h4>
                         <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
-                        <button>Read It</button>
+                        <button class="button button--white">Read It</button>
                     </div>
                     <div class="card card--small">
                         <img src="images/4-3.jpg" alt="beach during sunset with pink and orange hues" />
@@ -86,7 +86,7 @@
                         <img src="images/4-4.jpg" alt="fallen leafs with the color of yellow" />
                         <h4>Column One</h4>
                         <p>Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.</p>
-                        <button>Details</button>
+                        <button class="button button--white">Details</button>
                     </div>
                 </div>
                 <div class="card card--max">
@@ -97,23 +97,22 @@
                         venenatis magna, in blandit metus. Praesent volutpat cursus rhoncus. Aenean arcu diam, suscipit ac neque in, sollicitudin convallis orci.
                     </p>
                     <p>Fusce eu porta massa, sed tincidunt turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus a urna tellus. Integer pharetra vitae nisi et lacinia. Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque quis, maximus eget nisi.</p>
-                    <button>Read More</button>
+                    <button class="button button--white">Read More</button>
                 </div>
             </div>
             <div id="contact">
                 <div class="title title--contact">
                     <h2>Contact Form</h2>
                     <p>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia. Etiam a mi quis arcu varius condimentum.</p>
-                    <!-- <img src="" alt="" /> use background-image: url(""); instead -->
-                    <form action="" method="">
-                        <div>
+                    <form class="form-container" action="" method="">
+                        <div class="form-container form-container--three">
                             <input type="text" id="name" name="name" placeholder="Name" />
                             <input type="email" id="email" name="email" placeholder="Email" />
                             <input type="text" id="subject" name="subject" placeholder="Subject" />
                         </div>
                         <div>
-                            <textarea id="message" name="message" rows="8" cols="50">Your message here...</textarea>
-                            <input type="submit" value="Submit" />
+                            <textarea id="message" name="message" rows="8" cols="50" placeholder="Your message here..."></textarea>
+                            <input class="button button--dark" type="submit" value="Submit" />
                         </div>
                     </form>
                 </div>

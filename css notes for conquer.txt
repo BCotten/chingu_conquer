@@ -19,7 +19,7 @@ Font-size / line height:
 14px / 22.4px paragraphs
 16px / 20px nav buttons ? 500
 18px / 25.7px buttons
-20px / 22px h4 card titles
+20px / 22px h4 card titles 
 25px / 27.5px h3
 32px / 35.2px footer use it free
 36px / 39.6px h2
