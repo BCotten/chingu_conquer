@@ -3,7 +3,7 @@
 
     --fs-300: 0.75rem;
     --fs-400: 0.875rem;
-    --fs-500: 16px;
+    --fs-500: 1rem;
     --fs-600: 1.125rem;
     --fs-700: 1.25rem;
     --fs-800: 1.5625rem;
@@ -27,7 +27,7 @@
     --clr-neutral-700: #383E4C;
     --clr-neutral-800: #262628;
 
-    --border-radius: 0.625rem;
+    --border-radius: 0.225rem;
 }
 
 html {
@@ -61,10 +61,15 @@ hr {
     padding: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /********************                       Header Start                           ******************/
 
 header {
-    height: 75vh;
+    min-height: 75vh;
     display: grid;
     align-items: center;
     background-image: url("/images/bg-1.jpg");
@@ -76,11 +81,10 @@ nav {
     background-color: var(--clr-neutral-700);
     font-size: var(--fs-700);
     display: grid;
-    grid-template-columns: repeat(5, 150px);
-    place-items: center;
+    grid-template-columns: repeat(5, 1fr);
     place-content: center;
-    gap: 15px;
-    height: 80px;
+    place-items: center;
+    min-height: 5rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -91,7 +95,7 @@ nav a {
     border-width: 1px;
     border-style: solid;
     text-decoration: none;
-    padding: 10px 25px;
+    padding: 0.625rem 1.56rem;
 }
 
 nav a:hover {
@@ -113,26 +117,33 @@ nav a:visited{
 
 /********************                       Header End                            ******************/
 
-/********************                       Containers And Cards Start            ******************/
+/********************                Containers And Cards Button Start            ******************/
 
 .container {
+    margin: 0 auto;
     display: grid;
     justify-content: center;
     place-content: center;
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 2rem 0;
 }
 
 .container--three {
-    grid-template-columns: 1fr;
-    margin-top: 60px;
+    margin-top: 3.75rem;
 }
 
 .container--two {
-    grid-template-columns: 1fr;
-    margin: 60px 0 60px 0;
+    margin: 3.75rem 0;
 }
 
 .container--four {
-    grid-template-columns: 1fr;
+    margin-top: 3.75rem;
+    width: 16.25rem;
+}
+
+.container--one {
+    margin: 1.75rem auto 3.75rem auto;
 }
 
 .card {
@@ -140,16 +151,23 @@ nav a:visited{
 }
 
 .card--medium {
-    max-width: min-content;
-}
-
-.card--small {
     text-align: left;
 }
+
+
 
 .card--max {
     margin: auto;
     text-align: left;
+}
+
+.card h4 {
+    font-size: var(--fs-700);
+    padding: 0.8rem;
+}
+
+.card p {
+    padding: 0.8rem;
 }
 
 .card--small h4 {
@@ -160,7 +178,39 @@ nav a:visited{
     text-align: center;
 }
 
+.button {
+    border-radius: var(--border-radius);
+    font-size: var(--fs-600);
+    padding: 0.6rem;
+}
+
+.button--green {
+    background-color: var(--clr-accent-green);
+}
+
+.button--blue {
+    background-color: var(--clr-accent-blue);
+}
+
+.button--red {
+    background-color: var(--clr-accent-red);
+}
+
+.button--white {
+    background-color: var(--clr-neutral-300);
+}
+
+.button--dark {
+    background-color: var(--clr-neutral-800);
+}
+
+
 @media screen and (min-width: 775px) {
+    .container {
+        padding: 0 2rem;
+        gap: 2rem;
+    }
+
     .container--three {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -170,22 +220,57 @@ nav a:visited{
     }
 
     .container--four {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 16.25rem);
+        gap: 2rem 6rem;
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 990px) {
+
+    .container--four {
+        grid-template-columns: repeat(4, 12.75rem);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .container {
+        max-width: 71.25rem;
+        padding: 0;
+    }
+
+    .container--two {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container--four {
+        grid-template-columns: repeat(4, 16.25rem);
+        gap: 2rem;
+    }
 
 }
 
-/********************                       Containers And Cards End            ******************/
+
+/********************                Containers And Cards Button End            ******************/
 
 /********************                       Services Start                      ******************/
+
+
+.title h2 {
+    font-size: var(--fs-1000);
+    margin: 1.25rem 0;
+}
 
 .title--services {
     background-image: url("/images/bg-2.jpg");
     height: 316px;
+    display: grid;
+    place-content: center;
+    color: var(--clr-neutral-100);
 }
+
 
 /********************                       Services End                        ******************/
 
