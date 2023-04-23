@@ -22,7 +22,7 @@ function checkLinks(width) {
 
 function cardDarkMode() {
     const cardsDark = document.querySelectorAll('.card');
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('.switch');
     cardsDark.forEach((card) => {
         card.classList.toggle('card-light');
         card.classList.toggle('card-dark');
@@ -37,7 +37,7 @@ addEventListener('DOMContentLoaded', (_) => {
     const width = window.innerWidth;
     const navButton = document.querySelector('.nav-button');
     const topButton = document.querySelector('.button-top');
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('.switch');
     checkLinks(width);
 
     buttons.forEach((button) => button.addEventListener('click', cardDarkMode));
