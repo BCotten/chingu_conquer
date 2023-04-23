@@ -1,5 +1,5 @@
 :root {
-    --ff-base:'Open Sans', Helvetics, Arial;
+    --ff-base: 'Open Sans', Helvetics, Arial;
 
     --fs-300: 0.75rem;
     --fs-400: 0.875rem;
@@ -15,12 +15,12 @@
     --fw-700: 700;
 
     --clr-neutral-100: #ffffff;
-    --clr-neutral-200: #F2F2F2;
-    --clr-neutral-300: #CCCCCC;
-    --clr-neutral-400: #646D76;
+    --clr-neutral-200: #f2f2f2;
+    --clr-neutral-300: #cccccc;
+    --clr-neutral-400: #646d76;
     --clr-neutral-500: #666666;
     --clr-neutral-600: #333333;
-    --clr-neutral-700: #383E4C;
+    --clr-neutral-700: #383e4c;
     --clr-neutral-800: #262628;
 
     --border-radius: 0.5rem;
@@ -69,8 +69,11 @@ header {
     min-height: 75vh;
     display: grid;
     align-items: center;
-    background-image: url("/images/bg-1.jpg");
-    background-size: 100vw 75vh;
+    background-image: url('/images/bg-1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--clr-neutral-100);
 }
 
@@ -107,7 +110,7 @@ nav {
     background-color: var(--clr-neutral-400);
 }
 
-.links-display:visited{
+.links-display:visited {
     text-decoration: none;
     color: var(--clr-neutral-100);
 }
@@ -145,7 +148,6 @@ nav {
 }
 
 @media screen and (min-width: 775px) {
-
     .nav {
         font-size: var(--fs-500);
         grid-template-columns: repeat(5, 8rem);
@@ -159,16 +161,13 @@ nav {
         transform: scaleX(100%);
         width: 100%;
     }
-
 }
 
 @media screen and (min-width: 990px) {
-
     .nav {
         font-size: var(--fs-700);
         grid-template-columns: repeat(5, 10rem);
     }
-
 }
 
 /********************                       Header End                            ******************/
@@ -226,12 +225,23 @@ nav {
     gap: 0.5rem;
 }
 
+.card h4 {
+    font-size: var(--fs-700);
+    padding: 1rem;
+}
+
+.card p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .card--medium {
     text-align: left;
 }
 
-.card--small p {
-    text-align: left;
+.card--large,
+.card--small {
+    align-content: start;
 }
 
 .card--max {
@@ -239,18 +249,28 @@ nav {
     text-align: left;
 }
 
-.card h4 {
-    font-size: var(--fs-700);
-    padding: 0 1rem;
+.card--small p {
+    text-align: left;
 }
 
-.card p {
-    padding:  0 1rem;
+.card--small button {
+    align-self: center;
+}
+
+.card--medium p,
+.card--small p {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.card--large p,
+.card--max p {
+    padding-bottom: 1rem;
 }
 
 .card--max p,
 .card--max h4 {
-    padding: 0 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .button {
@@ -258,7 +278,7 @@ nav {
     padding: 0.5rem 1rem;
     place-self: center;
     text-decoration: none;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .button--left {
@@ -291,7 +311,6 @@ nav {
 }
 
 @media screen and (min-width: 990px) {
-
     .container--four {
         grid-template-columns: repeat(4, 12.75rem);
         gap: 2rem;
@@ -301,11 +320,9 @@ nav {
         place-self: center end;
         margin-right: 2rem;
     }
-
 }
 
 @media screen and (min-width: 1200px) {
-
     .container {
         width: 71.25rem;
         padding: 0;
@@ -317,14 +334,11 @@ nav {
         grid-template-columns: repeat(4, 16.25rem);
         gap: 2rem;
     }
-
 }
-
 
 /********************                Containers And Cards Button End            ******************/
 
 /********************                       Services Start                      ******************/
-
 
 .title h2 {
     font-size: var(--fs-1000);
@@ -332,30 +346,56 @@ nav {
 }
 
 .services-background {
-    background-image: url("/images/bg-2.jpg");
-    height: 316px;
+    background-image: url('/images/bg-2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
     color: var(--clr-neutral-100);
     display: grid;
     place-content: center;
 }
 
+.services-container {
+    max-width: 45rem;
+    font-weight: var(--fw-700);
+    padding: 1rem;
+}
 
 /********************                       Services End                        ******************/
 
 /********************                       Contact Start                       ******************/
 
 .contact-background {
-    background-image: url("/images/bg-3.jpg");
-    height: 598px;
+    background-image: url('/images/bg-3.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
     display: grid;
 }
 
 .contact-container {
     margin: auto;
+    color: var(--clr-neutral-100);
     padding: 1rem;
     max-width: 45rem;
     display: grid;
     grid-template-rows: repeat(2, auto) 1fr;
+}
+
+/* h2 styles from .title h2 in services section */
+
+.contact-p {
+    color: var(--clr-neutral-800);
+    font-size: var(--fs-600);
+    font-weight: var(--fw-700);
+    background-color: hsl(0, 0%, 90%, 0.5);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+
 }
 
 .form-container {
@@ -378,11 +418,17 @@ nav {
 }
 
 .feild {
+    color: var(--clr-neutral-800);
+    font-size: var(--fs-600);
+    font-weight: var(--fw-700);
     padding-left: 0.75rem;
+    background-color: hsl(0, 0%, 90%, 0.5);
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: var(--fs-600);
 }
 
 @media screen and (min-width: 775px) {
-
     .form-container {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
@@ -397,8 +443,6 @@ nav {
         grid-template-columns: 1fr;
         gap: 0.25rem 1rem;
     }
-
-
 }
 
 /********************                       Contact End                         ******************/
@@ -425,17 +469,4 @@ footer p {
     font-size: var(--fs-300);
 }
 
-
-
-
 /********************                       Footer End                          ******************/
-
-
-
-
-
-
-
-
-
-
