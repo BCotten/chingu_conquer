@@ -225,6 +225,16 @@ nav {
     gap: 0.5rem;
 }
 
+.card-light {
+    background-color: var(--clr-neutral-200);
+    color: var(--clr-neutral-800);
+}
+
+.card-dark {
+    background-color: var(--clr-neutral-800);
+    color: var(--clr-neutral-200);
+}
+
 .card h4 {
     font-size: var(--fs-700);
     padding: 1rem;
@@ -279,11 +289,35 @@ nav {
     place-self: center;
     text-decoration: none;
     margin-bottom: 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
 }
 
 .button--left {
     place-self: start;
-    margin: 0 0 1rem 2rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.button--accent-one {
+    background-color: var(--clr-neutral-300);
+}
+
+.button--accent-one-dark {
+    background-color: var(--clr-neutral-200);
+    color: var(--clr-neutral-800);
+}
+
+.button--accent-one:hover {
+    color: var(--clr-neutral-100);
+}
+
+.button--accent-two {
+    background-color: var(--clr-neutral-800);
+    color: var(--clr-neutral-100);
+}
+
+.button--accent-two:hover {
+    color: var(--clr-neutral-300)
 }
 
 @media screen and (min-width: 775px) {

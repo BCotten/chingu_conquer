@@ -20,11 +20,27 @@ function checkLinks(width) {
     }
 }
 
+function cardDarkMode() {
+    const cardsDark = document.querySelectorAll('.card');
+    const buttons = document.querySelectorAll('button');
+    cardsDark.forEach((card) => {
+        card.classList.toggle('card-light');
+        card.classList.toggle('card-dark');
+    });
+    buttons.forEach((button) => {
+        button.classList.toggle('button--accent-one');
+        button.classList.toggle('button--accent-one-dark');
+    });
+}
+
 addEventListener('DOMContentLoaded', (_) => {
     const width = window.innerWidth;
     const navButton = document.querySelector('.nav-button');
     const topButton = document.querySelector('.button-top');
+    const buttons = document.querySelectorAll('button');
     checkLinks(width);
+
+    buttons.forEach((button) => button.addEventListener('click', cardDarkMode));
 
     topButton.addEventListener('click', (_) => {
         const top = document.querySelector('#homepage');
@@ -44,11 +60,11 @@ addEventListener('DOMContentLoaded', (_) => {
 
     addEventListener('scroll', (_) => {
         const pixelsTop = window.scrollY;
-        const topButton = document.querySelector('.button-top')
+        const topButton = document.querySelector('.button-top');
         if (pixelsTop > 425) {
-            topButton.classList.remove('button-top--hide')
+            topButton.classList.remove('button-top--hide');
         } else {
-            topButton.classList.add('button-top--hide')
+            topButton.classList.add('button-top--hide');
         }
     });
 });
