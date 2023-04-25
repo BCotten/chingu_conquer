@@ -1,8 +1,6 @@
 # chingu_conquer
-***
 
 ## Overview
-***
 
 The purpose of creating this webpage has been to clone the bootstrap conquer template using only HTML, CSS, and JavaScript. Also this is a Tier One Solo Challenge to be done before a chingu voyage. 
 
@@ -12,7 +10,6 @@ The Link to My Clone: https://chingu-conquer.pages.dev/
 
 
 ## Features
-***
 
 - Responsive
 - Parallax on three background Images
@@ -34,7 +31,6 @@ The Link to My Clone: https://chingu-conquer.pages.dev/
  - Small Screen Hamburger Menu 
 
 ## How to Run
-***
 
 This is a basic webpage using only html, css, javascript.
 While there are many ways to run such a site locally.
@@ -47,5 +43,5 @@ What I used and would suggest is vscode and the extension Live Server.
 5. Right click the index.html within Explorer tab and click Open with Live Server
 
 ## Dev Dependencies
-***
+
 - prettier v2.8.8
