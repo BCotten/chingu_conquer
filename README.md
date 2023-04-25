@@ -20,15 +20,15 @@ The Link to My Clone: https://chingu-conquer.pages.dev/
   - Services Start to Services End
   - Contact Start to Contact End
   - Footer Start to Footer End
- - CSS variables used at root
+- CSS variables used at root
   - font size 300 to 1100
   - font weight 500 to 700
   - clr-neutral 100 to 800
   - border-radius
- - Top of page button on button left corner
- - Card Buttons Change cards to Dark Mode
- - Images Have a Mountain Night and Day time theme
- - Small Screen Hamburger Menu 
+- Top of page button on button left corner
+- Card Buttons Change cards to Dark Mode
+- Images Have a Mountain Night and Day time theme
+- Small Screen Hamburger Menu 
 
 ## How to Run
 
